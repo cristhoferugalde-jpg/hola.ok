@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vida Saludable — Guía Profesional Completa</title>
+  <meta name="description" content="Guía extensa y profesional con 20 consejos prácticos y 6 hábitos clave para llevar una vida saludable. Incluye nutrición, ejercicio, sueño, manejo del estrés y más." />
+  <meta name="author" content="Tu Nombre" />
+  <meta property="og:title" content="Vida Saludable — Guía Profesional" />
+  <meta property="og:description" content="20 consejos y 6 hábitos para una vida sana. Recomendaciones prácticas, herramientas y recursos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1514995669114-b7d2fc8c0f24?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg-soft: #0f172a;
+      --card: #0b1228;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #0ea5e9;
+      --brand-2:#22d3ee;
+      --ok:#10b981;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,.10), transparent 60%),
+                  radial-gradient(1000px 500px at 110% 10%, rgba(34,211,238,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:var(--brand)}
+    img{max-width:100%; display:block; border-radius: var(--radius-sm)}
+    .container{width:min(1150px, 92%); margin-inline:auto}
+    /* Header */
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:1rem; top:1rem; width:auto; height:auto; background:#111827; color:#fff; padding:.6rem .9rem; border-radius:10px}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(10px);
+      background: linear-gradient( to bottom, rgba(15,23,42,.85), rgba(15,23,42,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding: .9rem 0}
+    .brand{display:flex; align-items:center; gap:.7rem; font-weight:700; letter-spacing:.2px}
+    .logo{width:38px; height:38px; border-radius:10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow)}
+    .nav a{color:var(--text); text-decoration:none; opacity:.9}
+    .nav ul{display:flex; gap:1rem; list-style:none; padding:0; margin:0}
+    .nav a:hover{opacity:1}
+    .cta{padding:.6rem 1rem; border-radius: 999px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0b1020 !important; font-weight:700}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:center; padding: 3rem 0 2rem}
+    .badge{display:inline-flex; gap:.5rem; align-items:center; background: rgba(14,165,233,.12); color:#7dd3fc; border:1px solid rgba(125,211,252,.2); padding:.35rem .7rem; border-radius:999px; font-size:.9rem}
+    .hero h1{font-size: clamp(1.8rem, 4vw, 3rem); line-height:1.15; margin:.7rem 0}
+    .lead{color: var(--muted); max-width: 62ch}
+    .hero .actions{display:flex; gap:1rem; margin-top:1.1rem}
+    .ghost{border:1px solid rgba(255,255,255,.12); padding:.6rem 1rem; border-radius:999px}
+    .statbar{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.8rem}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:1rem; text-align:center}
+    .stat strong{font-size:1.4rem}
+
+    /* Sections */
+    section{padding:3rem 0}
+    .section-title{font-size: clamp(1.4rem, 3vw, 2rem); margin:0 0 1rem}
+    .section-sub{color:var(--muted); margin:0 0 1.6rem}
+
+    /* Grid cards */
+    .grid{display:grid; gap:1.2rem}
+    .grid-3{grid-template-columns: repeat(3, 1fr)}
+    .grid-2{grid-template-columns: repeat(2, 1fr)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding:1.1rem; box-shadow: var(--shadow)}
+    .card h3{margin:.2rem 0 .5rem; font-size:1.1rem}
+    .eyebrow{font-size:.85rem; color:var(--muted)}
+
+    /* List with icons */
+    .list{display:grid; grid-template-columns: 1fr; gap:.8rem; margin:0; padding:0; list-style:none}
+    .list li{display:grid; grid-template-columns: 28px 1fr; gap:.8rem; align-items:start; padding: .8rem; border:1px dashed rgba(255,255,255,.09); border-radius:12px; background: rgba(255,255,255,.02)}
+    .icon{width:28px; height:28px; display:grid; place-items:center; border-radius:9px; background:rgba(14,165,233,.18); border: 1px solid rgba(125,211,252,.25); font-weight:700; font-size:.9rem; color:#7dd3fc}
+
+    /* Table */
+    table{width:100%; border-collapse: collapse; overflow:hidden; border-radius:var(--radius)}
+    th, td{padding: .9rem}
+    thead th{background: rgba(255,255,255,.05); text-align:left; font-weight:700}
+    tbody tr:nth-child(odd){background: rgba(255,255,255,.03)}
+    tbody tr:nth-child(even){background: rgba(255,255,255,.015)}
+
+    /* Footer */
+    footer{padding:2rem 0; color:var(--muted); border-top: 1px solid rgba(255,255,255,.06)}
+    .footgrid{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:2rem}
+
+    /* Utilities */
+    .pill{display:inline-block; font-size:.8rem; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted)}
+    .highlight{background: linear-gradient(90deg, rgba(34,211,238,.15), transparent); border-bottom:1px dotted rgba(34,211,238,.4)}
+    .note{border-left:4px solid var(--brand); padding:.8rem 1rem; background: rgba(14,165,233,.1); border-radius:10px}
+    .check{color:var(--ok); font-weight:700}
+    .warn{color:var(--warn); font-weight:700}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns: 1fr}
+      .grid-2{grid-template-columns: 1fr}
+      .footgrid{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <a href="#contenido" class="skip">Saltar al contenido</a>
+  <header>
+    <nav class="container nav" aria-label="Principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Vida <span class="highlight">Saludable</span></span>
+      </div>
+      <ul>
+        <li><a href="#consejos">20 Consejos</a></li>
+        <li><a href="#habitos">6 Hábitos</a></li>
+        <li><a href="#plan">Plan semanal</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="cta" href="#contacto">Comenzar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="container hero" aria-label="Portada">
+      <div>
+        <span class="badge" aria-label="Etiqueta de calidad">★ Guía profesional</span>
+        <h1>Lleva una <span class="highlight">vida sana</span> con ciencia, hábitos y constancia</h1>
+        <p class="lead">Una guía extensa y práctica con <strong>20 consejos</strong> y <strong>6 hábitos</strong> esenciales para mejorar tu alimentación, energía, sueño y bienestar mental. Diseñada para personas que buscan un cambio sostenible.</p>
+        <div class="actions">
+          <a class="cta" href="#consejos">Ver consejos</a>
+          <a class="ghost" href="#habitos">Ver hábitos</a>
+        </div>
+        <div class="statbar">
+          <div class="stat"><strong>80/20</strong><div class="eyebrow">Enfoque flexible</div></div>
+          <div class="stat"><strong>150 min</strong><div class="eyebrow">Actividad semanal</div></div>
+          <div class="stat"><strong>7–9 h</strong><div class="eyebrow">Sueño recomendado</div></div>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1549068106-b024baf5062d?q=80&w=1400&auto=format&fit=crop" alt="Plato balanceado con vegetales y proteínas" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- POR QUÉ IMPORTA -->
+    <section class="container" id="por-que">
+      <h2 class="section-title">¿Por qué importa la salud integral?</h2>
+      <p class="section-sub">La salud integral combina <strong>alimentación</strong>, <strong>movimiento</strong>, <strong>sueño</strong> y <strong>gestión del estrés</strong>. Mejorar un área impulsa a las demás.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1543332164-6e82f355badb?q=80&w=1200&auto=format&fit=crop" alt="Persona corriendo al amanecer" loading="lazy" />
+          <h3>Más energía diaria</h3>
+          <p>Combinar carbohidratos complejos, proteínas y actividad física mejora la sensibilidad a la insulina y estabiliza la energía.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200&auto=format&fit=crop" alt="Plato saludable con colores" loading="lazy" />
+          <h3>Peso saludable sostenible</h3>
+          <p>Un déficit calórico leve, saciedad adecuada y hábitos consistentes son más efectivos que dietas extremas.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="Personas compartiendo comida" loading="lazy" />
+          <h3>Bienestar social y mental</h3>
+          <p>La conexión social, la luz natural y el descanso reducen el estrés y mejoran el estado de ánimo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 20 CONSEJOS -->
+    <section class="container" id="consejos" aria-labelledby="consejos-titulo">
+      <h2 class="section-title" id="consejos-titulo">20 consejos prácticos para una vida sana</h2>
+      <p class="section-sub">Aplícalos con el enfoque <span class="pill">80/20</span>: la perfección no es el objetivo; la constancia sí.</p>
+      <ol class="list" start="1">
+        <li><span class="icon">1</span><div><strong>Plato balanceado 50/25/25</strong>: 50% verduras, 25% proteína, 25% carbohidrato integral.</div></li>
+        <li><span class="icon">2</span><div><strong>Proteína en cada comida</strong>: huevo, legumbres, pollo, pescado o tofu para saciedad y masa muscular.</div></li>
+        <li><span class="icon">3</span><div><strong>Fibra diaria (25–35 g)</strong>: frutas enteras, verduras, granos integrales y legumbres.</div></li>
+        <li><span class="icon">4</span><div><strong>Hidratación consciente</strong>: agua como bebida base; limita azucaradas y alcohol.</div></li>
+        <li><span class="icon">5</span><div><strong>Planifica 1 vez/semana</strong>: define menú, compras y preparaciones simples.</div></li>
+        <li><span class="icon">6</span><div><strong>150–300 min/semana</strong> de cardio moderado o 75–150 min vigoroso.</div></li>
+        <li><span class="icon">7</span><div><strong>Fuerza 2–3 días/semana</strong>: empujes, jalones, sentadillas, bisagras de cadera y core.</div></li>
+        <li><span class="icon">8</span><div><strong>Camina más</strong>: integra pasos después de comer y micro-pausas activas.</div></li>
+        <li><span class="icon">9</span><div><strong>7–9 horas de sueño</strong>: rutina constante, dormitorio fresco y oscuro.</div></li>
+        <li><span class="icon">10</span><div><strong>Estrés bajo control</strong>: respiración 4-7-8, journaling o meditación 5–10 min.</div></li>
+        <li><span class="icon">11</span><div><strong>Sol de la mañana</strong> 5–10 min para anclar tu reloj biológico.</div></li>
+        <li><span class="icon">12</span><div><strong>Etiquetas claras</strong>: prioriza ingredientes simples, menos ultraprocesados.</div></li>
+        <li><span class="icon">13</span><div><strong>Desayuno con propósito</strong>: más proteína y fibra; menos azúcar libre.</div></li>
+        <li><span class="icon">14</span><div><strong>Snacks inteligentes</strong>: frutos secos, yogur natural, fruta, palomitas caseras.</div></li>
+        <li><span class="icon">15</span><div><strong>Moderación, no prohibición</strong>: disfruta tus antojos con porciones y frecuencia consciente.</div></li>
+        <li><span class="icon">16</span><div><strong>Postura y pausas</strong>: rompe el sedentarismo cada 45–60 min.</div></li>
+        <li><span class="icon">17</span><div><strong>Cuida tu entorno</strong>: ten a mano opciones saludables y haz difícil lo no deseado.</div></li>
+        <li><span class="icon">18</span><div><strong>Chequeos preventivos</strong>: controla presión, glucosa, lípidos y vacunas.</div></li>
+        <li><span class="icon">19</span><div><strong>Conexión social</strong>: programas con amigos/familia mejoran adherencia y ánimo.</div></li>
+        <li><span class="icon">20</span><div><strong>Aprende a cocinar 8 recetas base</strong>: te da autonomía y control nutricional.</div></li>
+      </ol>
+    </section>
+
+    <!-- 6 HÁBITOS CLAVE -->
+    <section class="container" id="habitos" aria-labelledby="habitos-titulo">
+      <h2 class="section-title" id="habitos-titulo">6 hábitos para lograr y mantener la salud</h2>
+      <p class="section-sub">Construye uno por mes. Marca consistencia, no perfección.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>1) Desayuno rico en proteína</h3>
+          <p>Al menos 25–35 g de proteína. Ej.: yogur griego con fruta y avena, omelette con verduras.</p>
+          <span class="pill">Métrica: ≥5/7 días</span>
+        </article>
+        <article class="card">
+          <h3>2) 8.000–10.000 pasos/día</h3>
+          <p>Acumula en bloques: después de comer, llamadas caminando y desplazamientos activos.</p>
+          <span class="pill">Métrica: promedio semanal</span>
+        </article>
+        <article class="card">
+          <h3>3) Entrenamiento de fuerza</h3>
+          <p>Rutina full-body 2–3 veces/semana. Progresión gradual de cargas.</p>
+          <span class="pill">Métrica: sesiones/semana</span>
+        </article>
+        <article class="card">
+          <h3>4) Ventana de sueño constante</h3>
+          <p>Acostarte y levantarte a horas similares; reduce pantallas 60 min antes.</p>
+          <span class="pill">Métrica: ≥6/7 días</span>
+        </article>
+        <article class="card">
+          <h3>5) Hidratación estructurada</h3>
+          <p>1 vaso al levantarte, 1 por comida, 1 durante ejercicio y otro a media tarde.</p>
+          <span class="pill">Métrica: vasos/día</span>
+        </article>
+        <article class="card">
+          <h3>6) Pausas de respiración</h3>
+          <p>3 veces al día: 1–3 minutos de respiración nasal lenta o 4-7-8.</p>
+          <span class="pill">Métrica: eventos/día</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLAN SEMANAL DE EJEMPLO -->
+    <section class="container" id="plan">
+      <h2 class="section-title">Plan semanal de ejemplo</h2>
+      <p class="section-sub">Úsalo como referencia flexible. Ajusta tiempos y niveles.</p>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Entrenamiento</h3>
+          <table aria-label="Plan de entrenamiento">
+            <thead><tr><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody>
+              <tr><td>Lunes</td><td>Fuerza full-body (45–60 min) + 10 min caminata</td></tr>
+              <tr><td>Martes</td><td>Cardio moderado (30–40 min) + movilidad</td></tr>
+              <tr><td>Miércoles</td><td>Fuerza full-body (45–60 min) + respiración</td></tr>
+              <tr><td>Jueves</td><td>Caminar 45–60 min o bici suave</td></tr>
+              <tr><td>Viernes</td><td>Fuerza full-body (45–60 min)</td></tr>
+              <tr><td>Sábado</td><td>Actividad lúdica: senderismo, baile, deportes</td></tr>
+              <tr><td>Domingo</td><td>Descanso activo + estiramientos</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="card">
+          <h3>Menú orientativo</h3>
+          <table aria-label="Plan de alimentación">
+            <thead><tr><th>Comida</th><th>Idea saludable</th></tr></thead>
+            <tbody>
+              <tr><td>Desayuno</td><td>Avena con yogur, fruta, semillas y canela</td></tr>
+              <tr><td>Media mañana</td><td>Fruta + puñado de frutos secos</td></tr>
+              <tr><td>Almuerzo</td><td>Plato 50/25/25: pollo, quinoa y ensalada colorida</td></tr>
+              <tr><td>Merienda</td><td>Hummus con palitos de zanahoria y pepino</td></tr>
+              <tr><td>Cena</td><td>Pescado al horno con papas y verduras asadas</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+
+    <!-- IMÁGENES INSPIRACIÓN -->
+    <section class="container" id="galeria" aria-label="Inspiración visual">
+      <h2 class="section-title">Inspírate con ideas sencillas</h2>
+      <p class="section-sub">Pequeños cambios consistentes > grandes esfuerzos esporádicos.</p>
+      <div class="grid grid-3">
+        <img src="https://images.unsplash.com/photo-1547496502-affa22d38842?q=80&w=1400&auto=format&fit=crop" alt="Tazón de avena con frutas frescas" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1546484959-f9a53db89ee9?q=80&w=1400&auto=format&fit=crop" alt="Pesas y botella de agua en un gimnasio" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop" alt="Persona haciendo sentadillas con peso" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- MITOS Y REALIDADES -->
+    <section class="container" id="mitos">
+      <h2 class="section-title">Mitos y realidades</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>“Los carbohidratos engordan”</h3>
+          <p><span class="check">Realidad:</span> el exceso calórico es el problema. Prioriza carbohidratos integrales y porciones adecuadas.</p>
+        </article>
+        <article class="card">
+          <h3>“Debes sudar para que cuente”</h3>
+          <p><span class="check">Realidad:</span> caminar y moverte a lo largo del día es clave para tu salud cardiometabólica.</p>
+        </article>
+      </div>
+      <p class="note" role="note">Nota: si tienes una condición médica, consulta con un profesional de salud antes de grandes cambios.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container" id="faq">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <details class="card"><summary><strong>¿Qué hago si “me salgo” del plan?</strong></summary><p>Retoma en la siguiente comida o día. Una comida no define tu progreso; la consistencia sí.</p></details>
+      <details class="card"><summary><strong>¿Necesito suplementos?</strong></summary><p>Prioriza comida real. Considera vitamina D, omega-3 o creatina solo si un profesional lo indica.</p></details>
+      <details class="card"><summary><strong>¿Cómo sé cuánta agua tomar?</strong></summary><p>Usa tu sed, color de orina claro y el esquema de vasos del hábito 5 como guía.</p></details>
+    </section>
+
+    <!-- CONTACTO / CTA -->
+    <section class="container" id="contacto">
+      <h2 class="section-title">¿Listo para empezar?</h2>
+      <p class="section-sub">Descarga esta guía, comparte con un amigo o guarda en favoritos para consultarla.</p>
+      <form class="card" aria-label="Suscripción a novedades" onsubmit="event.preventDefault(); alert('¡Gracias! Revisa tu correo.');">
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required placeholder="tu@correo.com" style="width:100%; padding:.8rem; margin:.6rem 0 1rem; border-radius:12px; border:1px solid rgba(255,255,255,.15); background:#0b1020; color:var(--text)" />
+        <button class="cta" type="submit">Recibir recursos</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footgrid">
+      <div>
+        <div class="brand" style="margin-bottom:.6rem">
+          <div class="logo" aria-hidden="true"></div>
+          <strong>Vida Saludable</strong>
+        </div>
+        <p>Contenido con fines educativos. No sustituye consejo médico profesional.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Secciones</div>
+        <ul>
+          <li><a href="#consejos">20 Consejos</a></li>
+          <li><a href="#habitos">Hábitos</a></li>
+          <li><a href="#plan">Plan semanal</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Recursos</div>
+        <ul>
+          <li><a href="#mitos">Mitos y realidades</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:1rem; display:flex; justify-content:space-between; align-items:center; gap:1rem">
+      <small>© <span id="year"></span> Vida Saludable. Todos los derechos reservados.</small>
+      <a class="pill" href="#contenido">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
